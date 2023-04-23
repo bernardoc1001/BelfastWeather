@@ -17,7 +17,7 @@ import {
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import LoadingSpinner from './components/LoadingSpinner';
+import FiveDayForecast from './components/FiveDayForecast';
 
 function Section({children, title}) {
   const isDarkMode = useColorScheme() === 'dark';
@@ -65,8 +65,7 @@ function App() {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Text>App.js</Text>
-          <LoadingSpinner />
+          <FiveDayForecast />
         </View>
       </ScrollView>
     </SafeAreaView>
