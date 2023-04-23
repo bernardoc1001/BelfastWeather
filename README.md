@@ -1,4 +1,7 @@
 
+See below for screenshot of App running on Android simulator
+![readme-app-screenshot.png](ReadmeAssests%2Freadme-app-screenshot.png)
+
 
 ### Icon Attributions
 <a href="https://www.flaticon.com/free-icons/rain" title="rain icons">Rain icons created by Flat Icons - Flaticon</a>
