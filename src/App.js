@@ -18,6 +18,7 @@ import {
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import FiveDayForecast from './components/FiveDayForecast';
+import NavBar from './components/NavBar';
 
 function Section({children, title}) {
   const isDarkMode = useColorScheme() === 'dark';
@@ -65,6 +66,7 @@ function App() {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          <NavBar />
           <FiveDayForecast />
         </View>
       </ScrollView>

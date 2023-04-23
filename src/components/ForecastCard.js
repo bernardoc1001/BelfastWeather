@@ -1,4 +1,4 @@
-import {Image, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import {Card, Button} from 'react-native-paper';
 import {weatherCodeToWeatherObj} from '../utils/weatherCodeUtils';
 import {useEffect, useState} from 'react';
@@ -22,14 +22,9 @@ function ForecastCard({date, weathercode}) {
   };
 
   return (
-    <Card>
+    <Card style={styles.card}>
       <Card.Title title={dayOfWeekName} />
-      <View
-        style={{
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-          justifyContent: 'space-between',
-        }}>
+      <View style={styles.container}>
         <Card.Content>
           {weatherObj && weatherObj.iconImage && (
             <Image
@@ -37,7 +32,6 @@ function ForecastCard({date, weathercode}) {
               style={{width: 35, height: 35}}
             />
           )}
-
           <Text> {weatherObj && weatherObj.description} </Text>
         </Card.Content>
         <Card.Actions>
@@ -46,7 +40,6 @@ function ForecastCard({date, weathercode}) {
           </Button>
         </Card.Actions>
       </View>
-
       {showMore && (
         <Card.Content>
           <Text>Weather Code: {weathercode}</Text>
@@ -55,5 +48,16 @@ function ForecastCard({date, weathercode}) {
     </Card>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+  card: {
+    marginBottom: 8,
+  },
+});
 
 export default ForecastCard;
