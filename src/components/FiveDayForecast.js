@@ -24,11 +24,9 @@ function FiveDayForecast() {
           setData(apiResponse.data);
         })
         .catch(error => {
-          // todo error handling
           console.error(error);
         });
     } catch (error) {
-      // todo error handling
       console.error(error);
     }
   };
